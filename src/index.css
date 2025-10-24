@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neutral warm color palette for subtle GenZ vibe */
+    --background: 36 33% 98%; /* soft beige background */
+    --foreground: 210 10% 10%; /* dark muted gray text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 10%;
+
+    --primary: 230 25% 18%; /* elegant charcoal */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 40 12% 92%; /* subtle cream */
+    --secondary-foreground: 230 25% 18%;
+
+    --muted: 40 12% 92%;
+    --muted-foreground: 220 8% 40%;
+
+    --accent: 230 10% 94%;
+    --accent-foreground: 230 25% 18%;
+
+    --border: 230 10% 90%;
+    --input: 230 10% 88%;
+    --ring: 230 10% 18%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 230 15% 8%;
+    --foreground: 0 0% 96%;
+    --card: 230 15% 12%;
+    --card-foreground: 0 0% 96%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 230 15% 8%;
+    --secondary: 230 15% 14%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 230 15% 14%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 230 15% 14%;
+    --accent-foreground: 0 0% 96%;
+    --border: 230 15% 18%;
+    --input: 230 15% 18%;
+    --ring: 0 0% 90%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border transition-colors duration-200;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-semibold text-primary;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-xl shadow-md hover:opacity-90 transition;
+  }
+
+  .card {
+    @apply bg-card rounded-2xl shadow-sm p-6 border border-border;
+  }
+
+  .text-outline {
+    color: white;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5),
+      1px -1px 0 rgba(0, 0, 0, 0.5),
+      -1px 1px 0 rgba(0, 0, 0, 0.5),
+      1px 1px 0 rgba(0, 0, 0, 0.5);
+  }
+}
